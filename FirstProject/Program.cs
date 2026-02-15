@@ -10,6 +10,9 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Gulshan Sattarova");
+            Console.WriteLine("Test");
+            Console.WriteLine("Test");
         }
     }
 }
