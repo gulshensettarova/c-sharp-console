@@ -7,13 +7,24 @@ using System.Threading.Tasks;
 
 namespace FirstProject
 {
-    internal class Program
+    using System;
+    using System.Collections.Generic;
+
+    class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            string name = "Gulshan";
-            System.String name1 = new String("Gulshan".ToCharArray());
-            Console.WriteLine(Object.Equals(name,name1));
+            Customer customer1 = new Customer(1, "Gulshan", "Gulshan@mail.com");
+
+            BankAccount account1 = new BankAccount("ACC1001", customer1, 500);
+
+            account1.Deposit(200);
+            account1.Withdraw(100);
+            account1.ShowBalance();
+
+            Bank bank = new Bank("ABB");
+            bank.AddAccount(account1);
+            bank.ShowAccounts();
         }
     }
 }
